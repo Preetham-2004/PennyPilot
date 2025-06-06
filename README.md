@@ -1,6 +1,5 @@
 # 🚀 PennyPilot - Personal Expense Tracker with Soothing AI
 
-## 🎥 Demo Video
 
 
 ---

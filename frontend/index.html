@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PennyPilot</title>
+
+  <style>
+    /* Preloader styling */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    .preloader-text {
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 5rem;
+      letter-spacing: 0.15em;
+      position: relative;
+    }
+
+    .letter {
+      display: inline-block;
+      color: #ffffff;
+      transform: translateY(100%);
+      opacity: 0;
+      position: relative;
+    }
+
+    .letter::after {
+      content: attr(data-letter);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #9b5de5;
+      opacity: 0.3;
+      filter: blur(10px);
+      z-index: -1;
+    }
+
+    #root {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-text">
+      <span class="letter" data-letter="P">P</span>
+      <span class="letter" data-letter="e">e</span>
+      <span class="letter" data-letter="n">n</span>
+      <span class="letter" data-letter="n">n</span>
+      <span class="letter" data-letter="y">y</span>
+      <span class="letter" data-letter="P">P</span>
+      <span class="letter" data-letter="i">i</span>
+      <span class="letter" data-letter="l">l</span>
+      <span class="letter" data-letter="o">o</span>
+      <span class="letter" data-letter="t">t</span>
+    </div>
+  </div>
+
+  <!-- React App Root -->
+  <div id="root"></div>
+
+  <!-- Vite React Script -->
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Enhanced GSAP Animation -->
+  <script>
+    window.addEventListener('load', () => {
+      const letters = document.querySelectorAll('.letter');
+      const preloader = document.getElementById('preloader');
+      const root = document.getElementById('root');
+
+      const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } });
+
+      // Letter entrance animation with glow effect
+      letters.forEach((letter, index) => {
+        gsap.set(letter, { y: '100%', opacity: 0 });
+      });
+
+      tl.to(letters, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 1.2,
+      })
+      .to(letters, {
+        color: '#9b5de5',
+        textShadow: '0px 0px 20px #9b5de5',
+        stagger: 0.05,
+        duration: 0.5,
+      }, '-=0.8')
+      .to(letters, {
+        scale: 1.2,
+        stagger: 0.05,
+        duration: 0.4,
+        ease: 'power2.out'
+      })
+      .to(letters, {
+        scale: 0.8,
+        opacity: 0,
+        stagger: 0.05,
+        duration: 0.6,
+      }, '+=0.2')
+      .to(preloader, {
+        scale: 1.1,
+        filter: 'blur(20px)',
+        duration: 1,
+      }, '-=0.5')
+      .to(preloader, {
+        y: '-100%',
+        duration: 1.5,
+        onComplete: () => preloader.style.display = 'none',
+      }, '+=0.1')
+      .to(root, {
+        opacity: 1,
+        duration: 1,
+      }, '-=0.8');
+    });
+  </script>
+</body>
+</html>

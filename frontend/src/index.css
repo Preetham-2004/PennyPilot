@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Bebas+Neue&family=Comfortaa&family=Heebo:wght@500&family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:wght@300;400&family=Lato&family=Lexend&family=M+PLUS+Rounded+1c:wght@500&family=Oswald:wght@300&family=Outfit:wght@500&family=Pacifico&family=Poppins&family=Prompt&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+    --font-disply:"Poppins","sans-serif";
+    --breakpoint-3xl:1920px;
+    --color-primary:#875cf5;
+}
+
+@layer base{
+    html{
+        font-family:var(--font-disply);
+    }
+
+    body{
+        background-color: #fcfbfc;
+        overflow-x:hidden;
+    }
+}
+
+.input-box {
+    @apply w-full flex justify-between gap-3 text-sm text-black bg-slate-100 rounded px-4 py-3 mb-4 mt-3 border border-slate-200;
+}
+
+.input-box:focus {
+    @apply outline-none border-primary ring-2 ring-primary/30;
+}
+
+
+.btn-primary{
+    @apply w-full text-sm font-medium text-white bg-violet-500 shadow-lg shadow-purple-600/5 p-[10px] rounded-md my-1 hover:bg-purple-600/15 hover:text-purple-600;
+}
+
+
+.card{
+    @apply bg-white p-6 rounded-2xl shadow-md shadow-gray-100 border border-gray-200/50;     
+}
+
+.card-btn{
+    @apply flex items-center gap-3 text-[12px] font-medium text-gray-700 hover:text-purple-500 bg-gray-50 hover:bg-purple-50 px-4 py-1.5 rounded-lg border border-gray-200/50 cursor-pointer;
+}
+
+.stat-card {
+    @apply w-full h-48 flex flex-col justify-between p-4 rounded-xl transition-all duration-300;    
+  }
+  
+  .add-btn{
+    @apply flex items-center justify-center gap-2 text-sm font-medium text-white bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 px-5 py-2 rounded-lg shadow-md shadow-teal-300/50 transition-all duration-300 ease-in-out;
+  }
+
+  .add-btn-fill{
+    @apply text-white bg-primary ;
+  }

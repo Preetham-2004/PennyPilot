@@ -6,7 +6,7 @@ PennyPilot is a modern personal finance tracker that simplifies your income and 
 
 ## 📽️ Demo Video
 
-<video src="assets/demo.mp4" width="100%" controls></video>
+<video src="frontend/src/assets/Demo.mp4" width="100%" controls></video>
 
 > _This video is hosted in the repository under `assets/demo.mp4`._
 

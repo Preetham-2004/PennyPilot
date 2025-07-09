@@ -12,7 +12,7 @@ const app = express();
 
 const allowedOrigins = [
   "https://pennypilot-frontend.onrender.com",
-  "http://localhost:3000"
+  "http://localhost:8000"
 ];
 
 app.use(

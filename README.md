@@ -4,14 +4,6 @@ PennyPilot is a modern personal finance tracker that simplifies your income and 
 
 ---
 
-## 📽️ Demo Video
-
-<video src="frontend/src/assets/Demo.mp4" width="100%" controls></video>
-
-> _This video is hosted in the repository under `assets/demo.mp4`._
-
----
-
 ## 🧩 Problem Statement
 
 Manual expense tracking is tedious and error-prone. Many people lack the time or consistency to monitor their finances properly.

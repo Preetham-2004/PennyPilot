@@ -1,6 +1,6 @@
 # 💸 PennyPilot
 
-PennyPilot is a modern personal finance tracker that simplifies your income and expense management. Powered by a smart dashboard, charts, and an AI chatbot, it brings automation and clarity to your financial life.
+PennyPilot is a modern personal finance tracker that simplifies your income and expense management. Powered by a smart dashboard, charts, it brings automation and clarity to your financial life.
 
 ---
 
@@ -10,7 +10,6 @@ Manual expense tracking is tedious and error-prone. Many people lack the time or
 
 PennyPilot solves this with:
 - ✅ A smart dashboard for real-time income/expense tracking
-- ✅ AI chatbot to add entries automatically
 - ✅ Insightful charts and category breakdowns
 - ✅ Mobile-friendly, dark-themed UI
 
@@ -20,9 +19,8 @@ PennyPilot solves this with:
 
 PennyPilot is a full-stack finance manager that allows users to:
 - 🧾 Add and manage income/expense entries
-- 💬 Use a chatbot to auto-log entries via text
 - 📊 Visualize data using category-wise charts
-- 🧠 Get AI-powered financial insights
+- 🧠 Get financial insights
 - 🌓 Use dark mode with a clean, responsive UI
 
 ---
@@ -30,10 +28,10 @@ PennyPilot is a full-stack finance manager that allows users to:
 ## 🔁 Workflow / How It Works
 
 - 🔐 User signs up or logs in
-- 💬 Add entries manually or via chatbot
+- 💬 Add entries manually 
 - 📊 Dashboard shows charts and summaries
 - 📁 All data is stored securely using MongoDB
-- 🧠 AI helps extract insights and auto-categorize transactions
+
 
 ---
 
@@ -42,16 +40,8 @@ PennyPilot is a full-stack finance manager that allows users to:
 ### ✅ Key Features
 
 - 🔐 JWT-based Authentication  
-- 💬 AI Chatbot for logging expenses/income  
 - 📊 Real-Time Dashboard & Chart Visualizations  
 - 💡 Categorized Analytics and Filtering  
-- 🌓 Dark Mode Support  
 - 📱 Fully Responsive Design  
 
 ---
-
-## 📁 Installation & Setup
-
-```bash
-git clone https://github.com/your-username/pennypilot.git
-cd pennypilot

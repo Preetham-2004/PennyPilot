@@ -1,4 +1,4 @@
-export const BASE_URL = "https://pennypilot-backend.onrender.com";
+export const BASE_URL="https://pennypilot-twhh.onrender.com";
 
 export const API_PATHS = {
   AUTH: {

@@ -40,10 +40,11 @@ const Login = () => {
     setError("");
 
     try {
-      const response = await axiosInstance.post(API_PATHS.AUTH.LOGIN, {
-        email,
-        password,
-      });
+      const response = await axiosInstance.post(
+        API_PATHS.AUTH.LOGIN,
+        { email, password },
+        { withCredentials: true }
+      );
 
       const { token, user } = response.data;
 
@@ -90,7 +91,6 @@ const Login = () => {
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-[#0A1628] via-[#0A1628] to-[#312E81] relative overflow-hidden">
-      {/* Floating background dots */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -116,7 +116,6 @@ const Login = () => {
         ))}
       </div>
 
-      {/* Floating icons */}
       <motion.div
         variants={floatingIconVariants}
         animate="animate"
@@ -175,7 +174,6 @@ const Login = () => {
               </motion.p>
             </motion.div>
 
-            {/* Login Form */}
             <form onSubmit={handleLogin} className="space-y-6">
               <motion.div variants={itemVariants}>
                 <div className="relative group">

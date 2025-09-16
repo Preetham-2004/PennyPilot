@@ -21,7 +21,6 @@ PennyPilot is a full-stack finance manager that allows users to:
 - 🧾 Add and manage income/expense entries
 - 📊 Visualize data using category-wise charts
 - 🧠 Get financial insights
-- 🌓 Use dark mode with a clean, responsive UI
 
 ---
 
@@ -31,7 +30,6 @@ PennyPilot is a full-stack finance manager that allows users to:
 - 💬 Add entries manually 
 - 📊 Dashboard shows charts and summaries
 - 📁 All data is stored securely using MongoDB
-
 
 ---
 
